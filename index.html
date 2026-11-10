@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SKILLS TEST</title>
+
+    <link rel="stylesheet" href="https://pyscript.net/releases/2025.3.1/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2025.3.1/core.js"></script>
+
+    <style>
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            background: linear-gradient(135deg, #ffe4ec, #ffc1d6);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #fff9fb;
+            width: 350px;
+            padding: 35px;
+            border-radius: 25px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(214, 75, 130, 0.2);
+        }
+
+        h1 {
+            color: #d94f87;
+            font-size: 27px;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            color: #d94f87;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #a94c73;
+            font-size: 14px;
+        }
+
+        input {
+            width: 85%;
+            padding: 12px;
+            margin: 15px 0;
+            border: 2px solid #f4a6c5;
+            border-radius: 12px;
+            outline: none;
+            font-size: 14px;
+            background-color: #fff0f5;
+        }
+
+        input:focus {
+            border-color: #d94f87;
+            box-shadow: 0 0 8px #f4a6c5;
+        }
+
+        button {
+            background-color: #e96b9b;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #d94f87;
+            transform: scale(1.05);
+        }
+
+        .result {
+            background-color: #ffeaf2;
+            margin-top: 25px;
+            padding: 15px;
+            border-radius: 18px;
+            text-align: left;
+            border: 1px solid #f8c5d8;
+        }
+
+        .result p {
+            padding: 8px;
+            background-color: #fff9fb;
+            border-radius: 8px;
+            margin: 8px 0;
+            color: #a94c73;
+        }
+
+        .result span {
+            color: #d94f87;
+            font-weight: bold;
+            margin-left: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Nonmetal Information</h1>
+        <p>Enter a nonmetal code to search</p>
+
+        <input type="text" id="nonmetal1" placeholder="Enter a Nonmetal">
+        <br><br>
+
+        <button py-click="search_nonmetal">
+            Search Nonmetal
+        </button>
+
+        <div class="result">
+            <h3>Showcase Result</h3>
+
+            <p><b>Name:</b> <span id="name"></span></p>
+            <p><b>Symbol:</b> <span id="symbol"></span></p>
+            <p><b>Atomic Number:</b> <span id="number"></span></p>
+            <p><b>Atomic Mass:</b> <span id="mass"></span></p>
+        </div>
+    </div>
+
+    <script type="py" src="main.py"></script>
+</body>
+</html>
